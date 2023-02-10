@@ -3,14 +3,14 @@ int ite, start;
 
 //// Count form 0 to 20
 println("From 0 to 20.");
-for(ite = 0; ite <=20; ite++) {
+for (ite = 0; ite <=20; ite++) {
   print(ite + " ");
 }
 println(""); //new line.
 
 //// Count from 0 to 20 only using the even numbers
 println("Only evens now.");
-for(ite = 0; ite <=20; ite+=2){
+for (ite = 0; ite <=20; ite+=2) {
   print(ite + " ");
 }
 println(""); //new line.
@@ -18,8 +18,22 @@ println(""); //new line.
 //// Count down from the start variable and take off
 println("Countdown.");
 start = 8;
-for(ite = start; ite > 0; ite--){
-  println(ite);
+ite = start;
+for (; ite > 0; ite--) {
+  switch (ite) {
+  case 3:
+    println("Three");
+    break;
+  case 2:
+    println("Two");
+    break;
+  case 1:
+    println("One");
+    break;
+  default:
+    println(ite);
+    break;
+  }
   delay(1000);
 }
 println("Take Off!");
@@ -28,7 +42,7 @@ println(""); //new line.
 //// Count from 0 to 20 only using the even numbers, now in a while loop
 println("Even Counting. with a while loop.");
 ite = 0;
-while(ite <= 20){
+while (ite <= 20) {
   print(ite + " ");
   ite+=2;
 }
@@ -38,8 +52,21 @@ println(""); //new line.
 println("Countdown. with a while loop.");
 start = 8;
 ite = start;
-while(ite > 0){
-  println(ite);
+while (ite > 0) {
+  switch (ite) {
+  case 3:
+    println("Three");
+    break;
+  case 2:
+    println("Two");
+    break;
+  case 1:
+    println("One");
+    break;
+  default:
+    println(ite);
+    break;
+  }
   delay(1000);
   ite--;
 }
