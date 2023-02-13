@@ -34,10 +34,7 @@ void draw(){
   line(width * 0.55, height * 0.9, width * 0.55, height * 1.0);
   
   //// Change States
-  int LocalFrame = (int)(frameCount%(30*frameLimit)/frameLimit);
-  if(frameCount%frameLimit==0) {
-    println(LocalFrame);
-  }
+  int LocalFrame = (int)((millis()/1000)%30);
   switch(LocalFrame){
      case 0: lights[0] = red; lights[1] = off; break;
      case 12: lights[1] = yellow; break;
@@ -51,6 +48,4 @@ void draw(){
     fill(lights[ite]);
     ellipse(center, middle + (ite-1) * lightsOffset, lightsOffset * 0.8, lightsOffset * 0.8);
   }
-  
-  
 }
